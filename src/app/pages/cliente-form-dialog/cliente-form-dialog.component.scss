@@ -1,0 +1,36 @@
+.titulo-dialog {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.formulario-cliente {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 8px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.campo {
+    width: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.acciones-dialog {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+button[mat-flat-button] {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}

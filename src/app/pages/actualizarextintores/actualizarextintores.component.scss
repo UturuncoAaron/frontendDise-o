@@ -1,0 +1,75 @@
+/* ---- contenedor principal (tarjeta) ---- */
+.dialog-card {
+    padding: 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .12);
+    background: #fff;
+    max-width: 560px;
+}
+
+/* ---- cabecera ---- */
+.header {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    background: linear-gradient(135deg, #e8f0ff 0%, #f6fcff 100%);
+
+    &__icon {
+        font-size: 32px;
+    }
+
+    &__title {
+        font: 600 20px/1 'Inter', sans-serif;
+        margin: 0;
+        color: #1b1b1b;
+    }
+}
+
+/* ---- formulario ---- */
+.form {
+    padding: 1.5rem;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem 1.2rem;
+    }
+
+    &__col-span {
+        grid-column: 1 / -1;
+        /* ocupar ancho completo */
+    }
+}
+
+/* ---- controles Material ---- */
+mat-form-field {
+    width: 100%;
+}
+
+/* ---- botones ---- */
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: .75rem;
+    margin-top: 1.5rem;
+}
+
+mat-form-field.mat-form-field-appearance-outline {
+    background-color: white;
+
+    .mat-select-trigger {
+        background-color: white;
+        border-radius: 4px;
+    }
+
+    .mat-select {
+        padding: 0.5rem;
+    }
+}
+
+::ng-deep .mat-select-value {
+    background-color: white !important;
+    color: #1b1b1b;
+}

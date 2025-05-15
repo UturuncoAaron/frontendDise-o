@@ -1,0 +1,69 @@
+<div class="d-flex vh-100">
+    <!-- Sidebar -->
+    <div class="sidebar-extintores">
+        <div class="logo-container">
+            <img src="Logo.webp" alt="Logo" width="120">
+        </div>
+
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button class="nav-link active" id="dashboard-tab" data-bs-toggle="pill" data-bs-target="#dashboard"
+                type="button" role="tab">
+                🏠 Dashboard
+            </button>
+            <button class="nav-link" id="clientes-tab" data-bs-toggle="pill" data-bs-target="#clientes" type="button"
+                role="tab">
+                👥 Clientes
+            </button>
+            <button class="nav-link" id="extintores-tab" data-bs-toggle="pill" data-bs-target="#extintores"
+                type="button" role="tab">
+                🧯 Extintores
+            </button>
+            <button class="nav-link" id="mantenimientos-tab" data-bs-toggle="pill" data-bs-target="#mantenimientos"
+                type="button" role="tab">
+                🛠️ Mantenimientos
+            </button>
+            <button class="nav-link" id="productos-tab" data-bs-toggle="pill" data-bs-target="#productos" type="button"
+                role="tab">
+                🛍️ Productos
+            </button>
+            <button class="nav-link" id="ventas-tab" data-bs-toggle="pill" data-bs-target="#ventas" type="button"
+                role="tab">
+                💰 Ventas
+            </button>
+            <button class="nav-link" id="usuarios-tab" data-bs-toggle="pill" data-bs-target="#usuarios" type="button"
+                role="tab">
+                👤 Usuarios
+            </button>
+            <button class="nav-link logout-btn" id="logout-tab" type="button">
+                🚪 Cerrar sesión
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenido -->
+    <div class="tab-content flex-fill p-4" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="dashboard" role="tabpanel"></div>
+        <div class="tab-pane fade" id="clientes" role="tabpanel">
+            <app-clientes></app-clientes>
+        </div>
+        <div class="tab-pane fade" id="extintores" role="tabpanel">
+            <app-extintores></app-extintores>
+        </div>
+        <div class="tab-pane fade" id="mantenimientos" role="tabpanel">
+            <h3>Módulo de Mantenimientos</h3>
+            <p>Listado con filtros, detalles y archivo adjunto.</p>
+        </div>
+        <div class="tab-pane fade" id="productos" role="tabpanel">
+            <h3>Módulo de Productos</h3>
+            <p>Inventario, tipo, precio, stock, agregar producto, editar, eliminar.</p>
+        </div>
+        <div class="tab-pane fade" id="ventas" role="tabpanel">
+            <h3>Módulo de Ventas</h3>
+            <p>Lista de ventas con detalles y cálculo automático de totales.</p>
+        </div>
+        <div class="tab-pane fade" id="usuarios" role="tabpanel">
+            <h3>Módulo de Usuarios</h3>
+            <p>Solo para admin. Crear, editar, eliminar, filtrar por rol.</p>
+        </div>
+    </div>
+</div>

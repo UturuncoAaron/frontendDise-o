@@ -1,0 +1,62 @@
+<mat-dialog-content class="dialog-card">
+
+    <!-- Cabecera -->
+    <header class="header">
+        <mat-icon class="header__icon" color="accent">edit</mat-icon>
+        <h2 class="header__title">Editar extintor</h2>
+    </header>
+
+    <!-- Formulario -->
+    <form [formGroup]="extintorForm" (ngSubmit)="onUpdate()">
+
+        <div class="form__grid">
+            <!-- Tipo -->
+            <mat-form-field appearance="outline">
+                <mat-label>Tipo</mat-label>
+                <input matInput formControlName="tipo" placeholder="ABC, CO₂, PQS …" />
+            </mat-form-field>
+
+            <!-- Capacidad -->
+            <mat-form-field appearance="outline">
+                <mat-label>Capacidad (kg / L)</mat-label>
+                <input matInput type="number" min="1" formControlName="capacidad" placeholder="Ej. 6" />
+            </mat-form-field>
+
+            <!-- Ubicación -->
+            <mat-form-field appearance="outline" class="form__col-span">
+                <mat-label>Ubicación</mat-label>
+                <input matInput formControlName="ubicacion" placeholder="Ej. Almacén central" />
+            </mat-form-field>
+
+            <!-- Fechas -->
+            <mat-form-field appearance="outline">
+                <mat-label>Instalación</mat-label>
+                <input matInput type="date" formControlName="fecha_instalacion" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Vencimiento</mat-label>
+                <input matInput type="date" formControlName="fecha_vencimiento" />
+            </mat-form-field>
+
+            <!-- Cliente -->
+            <mat-form-field appearance="outline" class="form__col-span">
+                <mat-label>Cliente</mat-label>
+                <mat-select formControlName="cliente_id">
+                    <mat-option *ngFor="let c of clientes" [value]="c.id_cliente">
+                        {{ c.nombre }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <!-- Botones -->
+        <div class="buttons">
+            <button mat-stroked-button color="warn" type="button" (click)="onCancel()">Cancelar</button>
+            <button mat-flat-button color="primary" type="submit" [disabled]="extintorForm.invalid">
+                Actualizar
+            </button>
+        </div>
+    </form>
+
+</mat-dialog-content>

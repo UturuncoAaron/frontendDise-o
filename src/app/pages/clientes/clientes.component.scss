@@ -1,0 +1,29 @@
+.cliente-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.busqueda-form {
+  width: 300px;
+}
+
+.tabla-container {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.estilizado-paginator {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Opcional: mejora el campo de entrada */
+.mat-form-field {
+  font-family: 'Raleway', sans-serif;
+}
+
+input[matInput] {
+  padding: 10px;
+}
