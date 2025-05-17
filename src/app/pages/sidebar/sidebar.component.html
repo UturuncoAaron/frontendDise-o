@@ -8,41 +8,43 @@
         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <button class="nav-link active" id="dashboard-tab" data-bs-toggle="pill" data-bs-target="#dashboard"
                 type="button" role="tab">
-                🏠 Dashboard
+                <span class="material-icons">dashboard</span> Dashboard
             </button>
             <button class="nav-link" id="clientes-tab" data-bs-toggle="pill" data-bs-target="#clientes" type="button"
                 role="tab">
-                👥 Clientes
+                <span class="material-icons">groups</span> Clientes
             </button>
             <button class="nav-link" id="extintores-tab" data-bs-toggle="pill" data-bs-target="#extintores"
                 type="button" role="tab">
-                🧯 Extintores
+                <span class="material-icons">fire_extinguisher</span> Extintores
             </button>
             <button class="nav-link" id="mantenimientos-tab" data-bs-toggle="pill" data-bs-target="#mantenimientos"
                 type="button" role="tab">
-                🛠️ Mantenimientos
+                <span class="material-icons">build</span> Mantenimientos
             </button>
             <button class="nav-link" id="productos-tab" data-bs-toggle="pill" data-bs-target="#productos" type="button"
                 role="tab">
-                🛍️ Productos
+                <span class="material-icons">inventory_2</span> Productos
             </button>
             <button class="nav-link" id="ventas-tab" data-bs-toggle="pill" data-bs-target="#ventas" type="button"
                 role="tab">
-                💰 Ventas
+                <span class="material-icons">attach_money</span> Ventas
             </button>
             <button class="nav-link" id="usuarios-tab" data-bs-toggle="pill" data-bs-target="#usuarios" type="button"
                 role="tab">
-                👤 Usuarios
+                <span class="material-icons">person</span> Usuarios
             </button>
             <button class="nav-link logout-btn" id="logout-tab" type="button">
-                🚪 Cerrar sesión
+                <span class="material-icons">logout</span> Cerrar sesión
             </button>
         </div>
     </div>
 
     <!-- Contenido -->
     <div class="tab-content flex-fill p-4" id="v-pills-tabContent">
-        <div class="tab-pane fade show active" id="dashboard" role="tabpanel"></div>
+        <div class="tab-pane fade show active" id="dashboard" role="tabpanel">
+            <app-dashboard></app-dashboard>
+        </div>
         <div class="tab-pane fade" id="clientes" role="tabpanel">
             <app-clientes></app-clientes>
         </div>

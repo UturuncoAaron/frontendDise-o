@@ -71,7 +71,7 @@ export class ClientesComponent implements OnInit {
 
   crearCliente() {
     const dialogRef = this.dialog.open(ClienteFormDialogComponent, {
-      width: '1500px',
+      width: '2500px',
       data: {} // vacío para crear
     });
 

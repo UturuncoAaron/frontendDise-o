@@ -1,43 +1,53 @@
-<h2 mat-dialog-title class="titulo-dialog">{{ data?.id_cliente ? 'Editar Cliente' : 'Nuevo Cliente' }}</h2>
+<h2 mat-dialog-title class="titulo-dialog">
+    {{ data?.id_cliente ? 'Editar Cliente' : 'Nuevo Cliente' }}
+</h2>
 
 <form [formGroup]="clienteForm" (ngSubmit)="guardar()" class="formulario-cliente">
-    <div class="campo">
-        <mat-form-field appearance="outline" class="full-width">
-            <mat-label>Nombre</mat-label>
-            <input matInput formControlName="nombre">
-        </mat-form-field>
-    </div>
 
-    <div class="campo">
-        <mat-form-field appearance="outline" class="full-width">
-            <mat-label>RUC</mat-label>
-            <input matInput formControlName="ruc">
-        </mat-form-field>
-    </div>
+    <div class="form-grid">
+        <div class="campo">
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Nombre</mat-label>
+                <mat-icon matPrefix>person</mat-icon>
+                <input matInput formControlName="nombre">
+            </mat-form-field>
+        </div>
 
-    <div class="campo">
-        <mat-form-field appearance="outline" class="full-width">
-            <mat-label>Dirección</mat-label>
-            <input matInput formControlName="direccion">
-        </mat-form-field>
-    </div>
+        <div class="campo">
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>RUC</mat-label>
+                <mat-icon matPrefix>badge</mat-icon>
+                <input matInput formControlName="ruc">
+            </mat-form-field>
+        </div>
 
-    <div class="campo">
-        <mat-form-field appearance="outline" class="full-width">
-            <mat-label>Teléfono</mat-label>
-            <input matInput formControlName="telefono">
-        </mat-form-field>
-    </div>
+        <div class="campo">
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Dirección</mat-label>
+                <mat-icon matPrefix>home</mat-icon>
+                <input matInput formControlName="direccion">
+            </mat-form-field>
+        </div>
 
-    <div class="campo">
-        <mat-form-field appearance="outline" class="full-width">
-            <mat-label>Correo</mat-label>
-            <input matInput formControlName="correo" type="email">
-        </mat-form-field>
+        <div class="campo">
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Teléfono</mat-label>
+                <mat-icon matPrefix>phone</mat-icon>
+                <input matInput formControlName="telefono">
+            </mat-form-field>
+        </div>
+
+        <div class="campo correo-completo">
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Correo</mat-label>
+                <mat-icon matPrefix>email</mat-icon>
+                <input matInput formControlName="correo" type="email">
+            </mat-form-field>
+        </div>
     </div>
 
     <mat-dialog-actions align="end" class="acciones-dialog">
         <button mat-button type="button" (click)="cancelar()">Cancelar</button>
-        <button mat-flat-button color="primary" type="submit">Guardar</button>
+        <button mat-flat-button class="btn-guardar" type="submit">Guardar</button>
     </mat-dialog-actions>
 </form>

@@ -5,7 +5,10 @@
             <mat-label>🔍 Buscar extintor</mat-label>
             <input matInput (keyup)="applyFilter($event)" placeholder="Tipo, ubicación...">
         </mat-form-field>
-        <button mat-flat-button color="primary" (click)="crearExtintor()">➕ Nuevo Extintor</button>
+        <button mat-raised-button class="btn-crear" (click)="crearExtintor()" style="margin-bottom: 10px;">
+            <mat-icon>add</mat-icon>
+            Nuevo Extintor
+        </button>
     </div>
 
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -42,10 +45,11 @@
         <ng-container matColumnDef="acciones">
             <th mat-header-cell *matHeaderCellDef> Acciones </th>
             <td mat-cell *matCellDef="let element">
-                <button mat-icon-button (click)="editarExtintor(element.id_extintor)">
+                <button mat-icon-button class="btn-editar" (click)="editarExtintor(element.id_extintor)">
                     <mat-icon>edit</mat-icon>
                 </button>
-                <button mat-icon-button color="warn" (click)="eliminarExtintor(element.id_extintor)">
+
+                <button mat-icon-button class="btn-eliminar" (click)="eliminarExtintor(element.id_extintor)">
                     <mat-icon>delete</mat-icon>
                 </button>
             </td>

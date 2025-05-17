@@ -1,62 +1,71 @@
 <mat-dialog-content class="dialog-card">
 
-    <!-- Cabecera -->
+    <!-- Cabecera elegante -->
     <header class="header">
         <mat-icon class="header__icon" color="accent">edit</mat-icon>
         <h2 class="header__title">Editar extintor</h2>
     </header>
 
-    <!-- Formulario -->
-    <form [formGroup]="extintorForm" (ngSubmit)="onUpdate()">
+    <!-- Formulario estilizado -->
+    <form [formGroup]="extintorForm" (ngSubmit)="onUpdate()" class="form">
 
         <div class="form__grid">
+
             <!-- Tipo -->
-            <mat-form-field appearance="outline">
+            <mat-form-field appearance="outline" class="full-width">
                 <mat-label>Tipo</mat-label>
+                <mat-icon matPrefix>category</mat-icon>
                 <input matInput formControlName="tipo" placeholder="ABC, CO₂, PQS …" />
             </mat-form-field>
 
             <!-- Capacidad -->
-            <mat-form-field appearance="outline">
+            <mat-form-field appearance="outline" class="full-width">
                 <mat-label>Capacidad (kg / L)</mat-label>
+                <mat-icon matPrefix>scale</mat-icon>
                 <input matInput type="number" min="1" formControlName="capacidad" placeholder="Ej. 6" />
             </mat-form-field>
 
             <!-- Ubicación -->
-            <mat-form-field appearance="outline" class="form__col-span">
+            <mat-form-field appearance="outline" class="full-width form__col-span">
                 <mat-label>Ubicación</mat-label>
+                <mat-icon matPrefix>location_on</mat-icon>
                 <input matInput formControlName="ubicacion" placeholder="Ej. Almacén central" />
             </mat-form-field>
 
-            <!-- Fechas -->
-            <mat-form-field appearance="outline">
+            <!-- Instalación -->
+            <mat-form-field appearance="outline" class="full-width">
                 <mat-label>Instalación</mat-label>
+                <mat-icon matPrefix>event</mat-icon>
                 <input matInput type="date" formControlName="fecha_instalacion" />
             </mat-form-field>
 
-            <mat-form-field appearance="outline">
+            <!-- Vencimiento -->
+            <mat-form-field appearance="outline" class="full-width">
                 <mat-label>Vencimiento</mat-label>
+                <mat-icon matPrefix>event_busy</mat-icon>
                 <input matInput type="date" formControlName="fecha_vencimiento" />
             </mat-form-field>
 
             <!-- Cliente -->
-            <mat-form-field appearance="outline" class="form__col-span">
+            <mat-form-field appearance="outline" class="full-width form__col-span">
                 <mat-label>Cliente</mat-label>
+                <mat-icon matPrefix>person</mat-icon>
                 <mat-select formControlName="cliente_id">
-                    <mat-option *ngFor="let c of clientes" [value]="c.id_cliente">
+                    <mat-option *ngFor="let c of clientes" [value]="c.id_cliente" style="background-color: white;">
                         {{ c.nombre }}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
+
         </div>
 
         <!-- Botones -->
         <div class="buttons">
             <button mat-stroked-button color="warn" type="button" (click)="onCancel()">Cancelar</button>
-            <button mat-flat-button color="primary" type="submit" [disabled]="extintorForm.invalid">
+            <button mat-flat-button class="btn-black" type="submit" [disabled]="extintorForm.invalid">
                 Actualizar
             </button>
         </div>
-    </form>
 
+    </form>
 </mat-dialog-content>

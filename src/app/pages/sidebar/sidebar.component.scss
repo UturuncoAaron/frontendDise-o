@@ -1,56 +1,58 @@
-    .sidebar-extintores {
-        background-color: #f4f4f4;
-        border-right: 3px solid #c62828;
-        width: 250px;
-        padding: 20px;
-        font-family: 'Raleway', sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: start;
-    }
+.nav-link .material-icons {
+    vertical-align: middle;
+    margin-right: 8px;
+    font-size: 20px;
+}
 
-    /* Logo centrado con borde */
-    .sidebar-extintores .logo-container {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 30px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid #ccc;
-    }
+.sidebar-extintores {
+    background-color: #f4f4f4;
+    border-right: 3px solid #c62828;
+    width: 250px;
+    padding: 20px;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+}
 
-    /* Estilo de botones de navegación */
-    .sidebar-extintores .nav-link {
-        width: 100%;
-        color: #333;
-        font-weight: 600;
-        text-align: start;
-        margin-bottom: 10px;
-        background-color: transparent;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 6px;
-        transition: background-color 0.2s ease, color 0.2s ease;
-    }
 
-    .sidebar-extintores .nav-link:hover {
-        background-color: #e53935;
-        color: #fff;
-    }
+.sidebar-extintores .logo-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.sidebar-extintores .nav-link {
+    width: 100%;
+    color: #333;
+    font-weight: 600;
+    text-align: start;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
 
-    .sidebar-extintores .nav-link.active {
-        background-color: #c62828;
-        color: #fff;
-    }
+.sidebar-extintores .nav-link:hover {
+    background-color: #e53935;
+    color: #fff;
+}
 
-    /* Botón de cerrar sesión separado al final */
-    .logout-btn {
-        margin-top: auto;
-        background-color: #d32f2f;
-        color: white;
-        width: 100%;
-    }
+.sidebar-extintores .nav-link.active {
+    background-color: #c62828;
+    color: #fff;
+}
+.logout-btn {
+    margin-top: auto;
+    background-color: #d32f2f;
+    color: white;
+    width: 100%;
+}
 
-    .logout-btn:hover {
-        background-color: #b71c1c;
-    }
+.logout-btn:hover {
+    background-color: #b71c1c;
+}

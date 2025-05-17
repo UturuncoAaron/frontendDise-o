@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIcon } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 @Component({
   selector: 'app-cliente-form-dialog',
@@ -11,7 +12,7 @@ import { MatInputModule } from '@angular/material/input';
     MatInputModule,
     MatDialogModule,
     ReactiveFormsModule,
-    MatButtonModule,],
+    MatButtonModule, MatIcon],
   templateUrl: './cliente-form-dialog.component.html',
   styleUrl: './cliente-form-dialog.component.scss'
 

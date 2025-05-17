@@ -1,29 +1,14 @@
-.cliente-toolbar {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 20px;
+.btn-crear {
+  background-color: #1976d2; /* azul más definido */
+  color: white;
 }
 
-.busqueda-form {
-  width: 300px;
+.icon-yellow {
+  color: #fbc02d;
+  font-size: 26px;
 }
 
-.tabla-container {
-  overflow-x: auto;
-  margin-bottom: 20px;
-}
-
-.estilizado-paginator {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-}
-
-/* Opcional: mejora el campo de entrada */
-.mat-form-field {
-  font-family: 'Raleway', sans-serif;
-}
-
-input[matInput] {
-  padding: 10px;
+.icon-red {
+  color: #e53935;
+  font-size: 26px;
 }
