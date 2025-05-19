@@ -1,0 +1,60 @@
+<div class="container">
+    <h1>Mantenimientos</h1>
+    <div class="extintor-toolbar" style="display: flex; justify-content: space-between; align-items: center;">
+        <mat-form-field appearance="outline" class="busqueda-form" style="flex: 1; margin-right: 16px;">
+            <mat-label>🔍 Buscar Mantenimientos</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Tipo, ubicación...">
+        </mat-form-field>
+        <button mat-raised-button class="btn-crear" style="margin-bottom: 10px; background-color: #1976d2; color: white;" (click)="crearMantenimiento()" >
+            <mat-icon>add</mat-icon>
+            Nuevo Mantenimiento
+        </button>
+    </div>
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+        <ng-container matColumnDef="id_mantenimiento">
+            <th mat-header-cell *matHeaderCellDef>ID</th>
+            <td mat-cell *matCellDef="let element">{{ element.id_mantenimiento }}</td>
+        </ng-container>
+        <ng-container matColumnDef="fecha">
+            <th mat-header-cell *matHeaderCellDef>Fecha</th>
+            <td mat-cell *matCellDef="let element">{{ element.fecha | date }}</td>
+        </ng-container>
+        <ng-container matColumnDef="descripcion">
+            <th mat-header-cell *matHeaderCellDef>Descripción</th>
+            <td mat-cell *matCellDef="let element">{{ element.descripcion }}</td>
+        </ng-container>
+        <ng-container matColumnDef="cliente">
+            <th mat-header-cell *matHeaderCellDef>Cliente</th>
+            <td mat-cell *matCellDef="let element">{{ element.cliente }}</td>
+        </ng-container>
+        <ng-container matColumnDef="tipo_extintor">
+            <th mat-header-cell *matHeaderCellDef>Tipo de Extintor</th>
+            <td mat-cell *matCellDef="let element">{{ element.tipo_extintor }}</td>
+        </ng-container>
+        <ng-container matColumnDef="ubicacion_extintor">
+            <th mat-header-cell *matHeaderCellDef>Ubicación</th>
+            <td mat-cell *matCellDef="let element">{{ element.ubicacion_extintor }}</td>
+        </ng-container>
+        <ng-container matColumnDef="usuario">
+            <th mat-header-cell *matHeaderCellDef>Usuario</th>
+            <td mat-cell *matCellDef="let element">{{ element.usuario }}</td>
+        </ng-container>
+        <ng-container matColumnDef="acciones">
+            <th mat-header-cell *matHeaderCellDef> Acciones </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-icon-button class="btn-editar"(click)="editarMantenimiento(element.id_mantenimiento)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+
+                <button mat-icon-button class="btn-eliminar" (click)="eliminarMantenimiento(element.id_mantenimiento)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons class="estilizado-paginator"></mat-paginator>
+</div>

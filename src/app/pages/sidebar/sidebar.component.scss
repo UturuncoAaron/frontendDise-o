@@ -1,4 +1,4 @@
-.nav-link .material-icons {
+.material-icons {
     vertical-align: middle;
     margin-right: 8px;
     font-size: 20px;
@@ -14,8 +14,8 @@
     flex-direction: column;
     align-items: flex-start;
     text-align: start;
+    height: 100%;
 }
-
 
 .sidebar-extintores .logo-container {
     width: 100%;
@@ -24,6 +24,7 @@
     padding-bottom: 20px;
     border-bottom: 1px solid #ccc;
 }
+
 .sidebar-extintores .nav-link {
     width: 100%;
     color: #333;
@@ -31,10 +32,9 @@
     text-align: start;
     margin-bottom: 10px;
     background-color: transparent;
-    border: none;
-    padding: 10px 15px;
     border-radius: 6px;
     transition: background-color 0.2s ease, color 0.2s ease;
+    padding: 10px 15px;
 }
 
 .sidebar-extintores .nav-link:hover {
@@ -46,6 +46,7 @@
     background-color: #c62828;
     color: #fff;
 }
+
 .logout-btn {
     margin-top: auto;
     background-color: #d32f2f;

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
@@ -19,7 +19,7 @@ import { MatIcon } from '@angular/material/icon';
   templateUrl: './crearextintores.component.html',
   styleUrl: './crearextintores.component.scss'
 })
-export class CrearextintoresComponent {
+export class CrearextintoresComponent implements OnInit{
   extintorForm!: FormGroup;
   clientes: Cliente[] = [];
 

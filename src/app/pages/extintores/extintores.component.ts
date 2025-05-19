@@ -26,6 +26,7 @@ import { ActualizarextintoresComponent } from '../actualizarextintores/actualiza
 export class ExtintoresComponent implements OnInit {
   displayedColumns: string[] = ['id_extintor', 'tipo', 'capacidad', 'ubicacion', 'fecha_instalacion', 'fecha_vencimiento', 'acciones'];
   dataSource = new MatTableDataSource<Extintor>();
+  
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 

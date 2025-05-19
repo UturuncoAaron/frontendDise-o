@@ -9,11 +9,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { DashboardComponent } from '../dashboard/dashboard.component';
+import { MantenimientoComponent } from '../mantenimiento/mantenimiento.component';
 
 
 @Component({
   selector: 'app-sidebar',
-  imports: [ClientesComponent, ExtintoresComponent, CommonModule, MatSidenavModule,DashboardComponent,
+  imports: [ClientesComponent, ExtintoresComponent, CommonModule, MatSidenavModule,DashboardComponent,MantenimientoComponent,
     MatListModule,
     MatIconModule,
     MatButtonModule,

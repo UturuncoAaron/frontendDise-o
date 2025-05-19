@@ -17,9 +17,12 @@ export interface Extintor {
   providedIn: 'root'
 })
 export class ExtintoresService {
+  getExtintores() {
+    throw new Error('Method not implemented.');
+  }
   private apiUrl = 'http://localhost:3000/api/extintores';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   obtenerExtintores(): Observable<Extintor[]> {
     return this.http.get<Extintor[]>(this.apiUrl);
@@ -37,7 +40,7 @@ export class ExtintoresService {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
   obtenerExtintorPorId(id: number): Observable<Extintor> {
-  return this.http.get<Extintor>(`${this.apiUrl}/${id}`);
-}
+    return this.http.get<Extintor>(`${this.apiUrl}/${id}`);
+  }
 
 }
